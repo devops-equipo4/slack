@@ -10,7 +10,7 @@
 
 module.exports = (robot) ->
 
-  saludosReplies = ['Weeena CTM', 'Holi!', 'Hola', 'Wasaaaaaaap', 'Ke pa!', 'Wena weeeena!']
+  saludosReplies = ['Hola devops', 'Hola Compañero', 'Hola, en que te puedo ayudar?', 'Mucho gusto', 'Que tal tu dia', 'Hola, que necesitas?']
   robot.hear /hola/i, (res) ->
     res.send res.random saludosReplies
 
@@ -32,8 +32,17 @@ module.exports = (robot) ->
     res.send "Slack"
   robot.hear /metodologia/i, (res) ->
     res.send "Ágil"
-  robot.hear /devops/i, (res) ->
-    res.send "Desarrollo y Operaciones"
+  robot.hear /Quién es el PO de la célula?/i, (res) ->
+    res.send " El PO de la Célula es Juan"
+  robot.hear /Quien es el devops/i, (res) ->
+    res.send "El devops es Jaime"
+  robot.hear /quien es gerente/i, (res) ->
+    res.send "el gerente es patricio"
+  robot.hear /quien es lider/i, (res) ->
+    res.send "el lider es Jose"
+  robot.hear /quien es QA/i, (res) ->
+    res.send "QA es ana"
+
 
   {WebClient} = require "@slack/client"
   module.exports = (robot) ->
